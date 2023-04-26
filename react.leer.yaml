@@ -10,8 +10,8 @@ MyButton:
   childrenTree:
     - Button
     - List
-      - &map ListItem
-    - &if someCondition &then ComponentA &else ComponentB
+      - $map ListItem
+    - $if someCondition $then ComponentA $else ComponentB
     - children
   components:
     Button:
