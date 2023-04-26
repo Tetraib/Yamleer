@@ -21,4 +21,5 @@ MyButton:
     ListItem:
       mapData: myList
       content: myList.item
-    ComponentA: components/AnotherComponent.tsx
+    ComponentA: components/otherFileNeme.tsx
+    ComponentB: components/otherFileNeme.tsx
