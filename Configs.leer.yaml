@@ -1,0 +1,14 @@
+framework: Nextjs
+generator: GPT4
+library:
+  - material-ui
+codingStyle:
+  components: functional
+  functions: arrow
+  useFragments: true
+  async: async/await
+  semicolons: false
+  filename: include
+  immutability: true
+  fpPatterns: true
+
