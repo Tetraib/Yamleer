@@ -10,8 +10,8 @@ MyButton:
   childrenTree:
     - Button
     - List
-      - mapOver ListItem
-    - someCondition ? ComponentA | ComponentB
+      - &map ListItem
+    - ?someCondition ComponentA | ComponentB
     - children
   components:
     Button:
