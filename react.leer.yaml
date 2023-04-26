@@ -2,11 +2,11 @@ MyButton:
   path: components/theFileName.tsx
   description: this is a description of the component 
   props:
-    - myProp: string
-    - children: React.ReactNode
-    - myList: string[]
+    - myProp string
+    - children React.ReactNode
+    - myList string[]
   states:
-    myTitle: hello: string
+    myTitle: hello string
   childrenTree:
     - Button
     - List
@@ -16,7 +16,7 @@ MyButton:
   components:
     Button:
       passProps:
-        onClick: myFunction: function
+        onClick: myFunction function
       content: Click me {{myTitle}}
     ListItem:
       mapData: myList
