@@ -1,32 +1,24 @@
-file: theFileName.tsx
-MyButton: 
+MyButton:
+  path: components/theFileName.tsx
   description: this is a description of the component 
   props:
-    - myProp; any
-    - children; React.ReactNode
-    - myList; array
+    - myProp: string
+    - children: React.ReactNode
+    - myList: string[]
   states:
-    myTitle: hello; string
-  functions:
-    myFunction:
-      description: It should log to console
-      params:
-        - myProps; string
-      returns:
-        - sucess; string
-      code:
-        - log myProps params to console
-        - get the current time from an api
+    myTitle: hello: string
   childrenTree:
     - Button
     - List
       - mapOver ListItem
+    - someCondition ? ComponentA | ComponentB
     - children
-Button:
-  passProps:
-    onClick: myFunction; function
-  content: Click me <% myTitle %>
-ListItem:
-  mapData: myList
-  content: <% item %>
-  
+  components:
+    Button:
+      passProps:
+        onClick: myFunction: function
+      content: Click me {{myTitle}}
+    ListItem:
+      mapData: myList
+      content: myList.item
+    ComponentA: components/AnotherComponent.tsx
