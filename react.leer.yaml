@@ -1,0 +1,32 @@
+file: theFileName.tsx
+MyButton: 
+  description: this is a description of the component 
+  props:
+    - myProp; any
+    - children; React.ReactNode
+    - myList; array
+  states:
+    myTitle: hello; string
+  functions:
+    myFunction:
+      description: It should log to console
+      params:
+        - myProps; string
+      returns:
+        - sucess; string
+      code:
+        - log myProps params to console
+        - get the current time from an api
+  childrenTree:
+    - Button
+    - List
+      - mapOver ListItem
+    - children
+Button:
+  passProps:
+    onClick: myFunction; function
+  content: Click me <% myTitle %>
+ListItem:
+  mapData: myList
+  content: <% item %>
+  
