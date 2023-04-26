@@ -11,7 +11,7 @@ MyButton:
     - Button
     - List
       - &map ListItem
-    - ?someCondition ComponentA | ComponentB
+    - &if someCondition &then ComponentA &else ComponentB
     - children
   components:
     Button:
