@@ -1,4 +1,4 @@
-MyButton:
+MyComponent:
   path: components/theFileName.tsx
   description: this is a description of the component 
   props:
