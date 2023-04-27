@@ -7,7 +7,7 @@ MyComponent:
     - myList: string[]
   states:
     myTitle: hello
-  childrenTree:
+  childStructure:
     - Button
     - List
       - each myList: ListItem
@@ -17,7 +17,7 @@ MyComponent:
           - ComponentB
           - ComponentC
     - children
-  childrenDefinition:
+  childDefinition:
     Button:
       passProps:
         onClick: myFunction
