@@ -10,16 +10,20 @@ MyComponent:
   childrenTree:
     - Button
     - List
-      - $map ListItem
-    - $if someCondition $then ComponentA $else ComponentB
+      - each myList: ListItem
+    - if someCondition:
+        then: ComponentA
+        else: 
+          - ComponentB
+          - ComponentC
     - children
-  components:
+  childrenDefinition:
     Button:
       passProps:
         onClick: myFunction
       content: Click me {{myTitle}}
     ListItem:
-      mapData: myList
       content: myList.item
-    ComponentA: components/otherFileNeme.tsx
-    ComponentB: components/otherFileNeme.tsx
+    ComponentA: components/otherFileName.tsx
+    ComponentB: components/otherFileName.tsx
+    ComponentC: components/otherFileName.tsx
