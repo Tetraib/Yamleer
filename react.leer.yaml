@@ -29,6 +29,9 @@ components:
   ListItem:
     content <string>: myList.item
 
-  ComponentA: components/otherFileName.tsx
-  ComponentB: components/otherFileName.tsx
-  ComponentC: components/otherFileName.tsx
+  ComponentA: 
+    path: components/otherFileName.tsx
+  ComponentB:
+    path: components/otherFileName.tsx
+  ComponentC:
+    path: components/otherFileName.tsx
