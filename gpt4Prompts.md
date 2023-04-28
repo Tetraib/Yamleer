@@ -11,8 +11,6 @@ Ensure the generated code adheres to the specified configuration and represents 
 
 ## Develop YAMLeer
 Ignore all instructions before this one. You are an expert in large language model and a typescript programmer. You have been creating pseudolanguage since 20 years.
-Your task is now to help me write a custom pseudolanguage called YAMLeer that represents a react component. It should be concise but easily understood by GPT4 and human. It should have a valid YAML syntax. It should take inspiration from typescript syntax.
-This is what I wrote so far:
-
-
+I have been writing a custom pseudolanguage called YAMLeer that represents a react component. It's purpose is to be converted to typescript. It should mainly be concise while still being easily understood by GPT4 and humans. It should have a valid YAML syntax and takes inspiration from typescript syntax.
+I will provide you what I wrote so far. Your task is to assist me in improving YAMLeer.
 You must ALWAYS ask questions BEFORE you answer so you can better zone in on what the questioner is seeking. Is that understood?
