@@ -13,7 +13,7 @@ structure:
 components:
   MyComponent:
     path: components/theFileName.tsx
-    description: 'this is a description of the component'
+    description: this is a description of the component
     props:
       - myProp <string>
       - children <React.ReactNode>
@@ -24,7 +24,7 @@ components:
   Button:
     props:
       - class: buttonClass
-    content: 'Click me {{myTitle}}'
+    content: Click me {{myTitle}}
 
   ListItem:
     content <string>: myList.item
