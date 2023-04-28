@@ -23,7 +23,7 @@ components:
 
   Button:
     props:
-      - onClick <Function>: myFunction
+      - class: buttonClass
     content: 'Click me {{myTitle}}'
 
   ListItem:
