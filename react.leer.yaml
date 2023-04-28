@@ -10,24 +10,25 @@ structure:
               - ComponentC
       - children
 
-MyComponent:
-  path: components/theFileName.tsx
-  description: 'this is a description of the component'
-  props:
-    - myProp <string>
-    - children <React.ReactNode>
-    - myList <string[]>
-  states:
-    myTitle <string>: hello
+components:
+  MyComponent:
+    path: components/theFileName.tsx
+    description: 'this is a description of the component'
+    props:
+      - myProp <string>
+      - children <React.ReactNode>
+      - myList <string[]>
+    states:
+      myTitle <string>: hello
 
-Button:
-  props:
-    - onClick <Function>: myFunction
-  content: 'Click me {{myTitle}}'
+  Button:
+    props:
+      - onClick <Function>: myFunction
+    content: 'Click me {{myTitle}}'
 
-ListItem:
-  content <string>: myList.item
+  ListItem:
+    content <string>: myList.item
 
-ComponentA: components/otherFileName.tsx
-ComponentB: components/otherFileName.tsx
-ComponentC: components/otherFileName.tsx
+  ComponentA: components/otherFileName.tsx
+  ComponentB: components/otherFileName.tsx
+  ComponentC: components/otherFileName.tsx
