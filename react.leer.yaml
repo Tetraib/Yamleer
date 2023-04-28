@@ -2,14 +2,14 @@ MyComponent:
   path: components/theFileName.tsx
   description: this is a description of the component 
   props:
-    - myProp: string
-    - children: React.ReactNode
-    - myList: string[]
+    - myProp <string>
+    - children <React.ReactNode>
+    - myList <string[]>
   states:
-    myTitle: hello
+    myTitle <string>: hello
   childStructure:
     - Button
-    - List
+    - List:
       - for myList: ListItem
     - if someCondition:
         true: ComponentA
@@ -20,10 +20,10 @@ MyComponent:
   childDefinition:
     Button:
       passProps:
-        onClick: myFunction
-      content: Click me {{myTitle}}
+        onClick <Function>: myFunction
+      content <string>: Click me {{myTitle}}
     ListItem:
-      content: myList.item
+      content <string>: myList.item
     ComponentA: components/otherFileName.tsx
     ComponentB: components/otherFileName.tsx
     ComponentC: components/otherFileName.tsx
