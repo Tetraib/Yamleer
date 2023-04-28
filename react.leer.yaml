@@ -1,29 +1,33 @@
+structure:
+  - MyComponent:
+      - Button
+      - List:
+          - for myList: ListItem
+      - if someCondition:
+            true: ComponentA
+            false: 
+              - ComponentB
+              - ComponentC
+      - children
+
 MyComponent:
   path: components/theFileName.tsx
-  description: this is a description of the component 
+  description: 'this is a description of the component'
   props:
     - myProp <string>
     - children <React.ReactNode>
     - myList <string[]>
   states:
     myTitle <string>: hello
-  childStructure:
-    - Button
-    - List:
-      - for myList: ListItem
-    - if someCondition:
-        true: ComponentA
-        false: 
-          - ComponentB
-          - ComponentC
-    - children
-  childDefinition:
-    Button:
-      passProps:
-        onClick <Function>: myFunction
-      content <string>: Click me {{myTitle}}
-    ListItem:
-      content <string>: myList.item
-    ComponentA: components/otherFileName.tsx
-    ComponentB: components/otherFileName.tsx
-    ComponentC: components/otherFileName.tsx
+
+Button:
+  props:
+    - onClick <Function>: myFunction
+  content: 'Click me {{myTitle}}'
+
+ListItem:
+  content <string>: myList.item
+
+ComponentA: components/otherFileName.tsx
+ComponentB: components/otherFileName.tsx
+ComponentC: components/otherFileName.tsx
