@@ -10,10 +10,10 @@ MyComponent:
   childStructure:
     - Button
     - List
-      - each myList: ListItem
+      - for myList: ListItem
     - if someCondition:
-        then: ComponentA
-        else: 
+        true: ComponentA
+        false: 
           - ComponentB
           - ComponentC
     - children
