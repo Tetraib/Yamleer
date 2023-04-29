@@ -10,8 +10,8 @@ Configuration:
     - use arrow function
     - use react fragments
     - use async/await
-    - no semicolons at the end of line
-    - include filename in code as comment
+    - use optional semicolon
+    - include filename at first line of file
     - favor functional programming
 structure:
   - MyComponent:
@@ -31,10 +31,12 @@ components:
       - myProp <string>
       - children <React.ReactNode>
       - myList <string[]>
-    Behavior:
+    states:
+      - myTitle <string> hello
+    behavior:
       - on Button, when clicked, do update {{myTitle}} to world
-    Layout:
-      - alignment: center vertical horizontal
+    layout:
+      - alignment: center vertical, center horizontal
       - width: sm
   Button:
     props:
