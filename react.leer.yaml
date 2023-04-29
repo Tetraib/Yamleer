@@ -1,3 +1,17 @@
+Configuration:
+  framework: Nextjs
+  generator: GPT4
+  targetLanguage: Typescript
+  library:
+    - material-ui
+  codingStyle:
+    - use functional component
+    - use arrow function
+    - use react fragments
+    - use async/await
+    - no semicolons at the end of line
+    - include filename
+    - favor functional programming
 Behavior:
   - When Button is clicked update {{myTitle}} to world.
 structure:
