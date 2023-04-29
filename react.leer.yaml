@@ -14,16 +14,16 @@ Configuration:
     - include path at first line of code
     - favor functional programming
 structure:
-  - MyComponent:
-      - Button
-      - List:
-          - for myList: ListItem
-      - if someCondition:
-            true: ComponentA
-            false: 
-              - ComponentB
-              - ComponentC
-      - children
+  MyComponent:
+    Button:
+    List:
+      for myList: ListItem
+      if someCondition:
+        true: ComponentA
+        false: 
+          ComponentB:
+          ComponentC:
+      children:
 components:
   MyComponent:
     path: components/theFileName.tsx
@@ -36,8 +36,9 @@ components:
     behavior:
       - handleClick: on Button, when clicked, do add 1 to {{counter}}
     layout:
-      - alignment: center vertical, center horizontal
-      - width: sm
+      - center vertical
+      - center horizontal
+      - sm width
   Button:
     props:
       - class: myClassName
