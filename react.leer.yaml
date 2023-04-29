@@ -11,7 +11,7 @@ Configuration:
     - use react fragments
     - use async/await
     - omit semicolons
-    - include filename at first line of file
+    - include path at first line of code
     - favor functional programming
 structure:
   - MyComponent:
