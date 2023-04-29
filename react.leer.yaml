@@ -32,7 +32,7 @@ components:
       - children <React.ReactNode>
       - myList <string[]>
     states:
-      - counter: 0 <number>
+      - counter: 0
     behavior:
       - handleClick: on Button, when clicked, do add 1 to {{counter}}
     layout:
@@ -43,7 +43,7 @@ components:
       - class: myClassName
     content: Click me {{myTitle}}
   ListItem:
-    content <string>: myList.item
+    content: myList.item
   ComponentA: 
     importFrom: components/otherFileName.tsx
   ComponentB:
