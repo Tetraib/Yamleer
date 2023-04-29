@@ -26,7 +26,6 @@ structure:
               - ComponentB
               - ComponentC
       - children
-
 components:
   MyComponent:
     path: components/theFileName.tsx
@@ -36,18 +35,15 @@ components:
       - myList <string[]>
     states:
       myTitle <string>: hello
-
+    Layout:
+      - alignment: center vertical horizontal
+      - width: sm
   Button:
     props:
-      - onclick: handleClick <function>
+      - class: myClassName
     content: Click me {{myTitle}}
-    function:
-      handleClick:
-        - change {{myTitle}} to world
-
   ListItem:
     content <string>: myList.item
-
   ComponentA: 
     importFrom: components/otherFileName.tsx
   ComponentB:
