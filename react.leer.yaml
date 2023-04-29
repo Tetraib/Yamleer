@@ -32,9 +32,9 @@ components:
       - children <React.ReactNode>
       - myList <string[]>
     states:
-      - counter <number> 0
+      - counter: 0 <number>
     behavior:
-      - handleClick <function> on Button, when clicked, do add 1 to {{counter}}
+      - handleClick: on Button, when clicked, do add 1 to {{counter}}
     layout:
       - alignment: center vertical, center horizontal
       - width: sm
