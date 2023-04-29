@@ -10,7 +10,7 @@ Configuration:
     - use arrow function
     - use react fragments
     - use async/await
-    - use optional semicolon
+    - omit semicolons
     - include filename at first line of file
     - favor functional programming
 structure:
