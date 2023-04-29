@@ -28,7 +28,7 @@ components:
     content: Click me {{myTitle}}
     function:
       handleClick:
-        - change myTitle to 
+        - change {{myTitle}} to world
 
   ListItem:
     content <string>: myList.item
