@@ -14,7 +14,7 @@ Configuration:
     - include filename in code as comment
     - favor functional programming
 Behavior:
-  - When Button is clicked update {{myTitle}} to world.
+  - on Button, when clicked, do update {{myTitle}} to world.
 structure:
   - MyComponent:
       - Button
