@@ -13,8 +13,6 @@ Configuration:
     - no semicolons at the end of line
     - include filename in code as comment
     - favor functional programming
-Behavior:
-  - on Button, when clicked, do update {{myTitle}} to world.
 structure:
   - MyComponent:
       - Button
@@ -35,6 +33,8 @@ components:
       - myList <string[]>
     states:
       myTitle <string>: hello
+    Behavior:
+      - on Button, when clicked, do update {{myTitle}} to world.
     Layout:
       - alignment: center vertical horizontal
       - width: sm
