@@ -1,3 +1,5 @@
+Behavior:
+  - When Button is clicked update {{myTitle}} to world.
 structure:
   - MyComponent:
       - Button
@@ -22,8 +24,11 @@ components:
 
   Button:
     props:
-      - class: buttonClass
+      - onclick: handleClick <function>
     content: Click me {{myTitle}}
+    function:
+      handleClick:
+        - change myTitle to 
 
   ListItem:
     content <string>: myList.item
