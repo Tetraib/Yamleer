@@ -11,7 +11,7 @@ Configuration:
     - use react fragments
     - use async/await
     - no semicolons at the end of line
-    - include filename
+    - include filename in code as comment
     - favor functional programming
 Behavior:
   - When Button is clicked update {{myTitle}} to world.
@@ -49,8 +49,8 @@ components:
     content <string>: myList.item
 
   ComponentA: 
-    path: components/otherFileName.tsx
+    importFrom: components/otherFileName.tsx
   ComponentB:
-    path: components/otherFileName.tsx
+    importFrom: components/otherFileName.tsx
   ComponentC:
-    path: components/otherFileName.tsx
+    importFrom: components/otherFileName.tsx
