@@ -32,7 +32,7 @@ components:
       - children <React.ReactNode>
       - myList <string[]>
     states:
-      myTitle <string>: hello
+      - myTitle <string> hello
     Behavior:
       - on Button, when clicked, do update {{myTitle}} to world
     Layout:
