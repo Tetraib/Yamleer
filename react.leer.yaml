@@ -34,7 +34,7 @@ components:
     states:
       - counter <number> 0
     behavior:
-      - handleClick: on Button, when clicked, do add 1 to {{counter}}
+      - handleClick <function> on Button, when clicked, do add 1 to {{counter}}
     layout:
       - alignment: center vertical, center horizontal
       - width: sm
