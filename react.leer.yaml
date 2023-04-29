@@ -1,3 +1,4 @@
+Description: This is YAMLeer. A pseudolanguage that represents React components
 Configuration:
   framework: Nextjs
   generator: GPT4
