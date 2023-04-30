@@ -19,8 +19,8 @@ structure:
     List:
       for myList: ListItem
       if someCondition:
-        true: ComponentA
-        false: ComponentB
+        - true: ComponentA
+        - false: ComponentB
       children:
 components:
   MyComponent:
