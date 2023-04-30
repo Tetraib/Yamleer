@@ -18,8 +18,8 @@ structure:
   components:
     component:
       path: string
-      props: '(string or {string: string})[]'
-      states: '{string: string}[]'
+      props: '(string or (string: string))[]'
+      states: '(string: string)[]'
       behavior: string[]
       layout: string[]
       content: string
@@ -28,10 +28,9 @@ definitions:
   component:
     nameConvention: capitalStart
 types:
-  rstruct:
-    string: string or <rstruct> or <forLoop> or <ifCondition>
-  forLoop: '{forName: forRule}'
-  ifCondition: '(ifRule: string or <rstruct>)[]'
+  rstruct: 'capitalStart: (nul or <rstruct> or <forLoop> or <ifCondition>)'
+  forLoop: 'forName: forRule'
+  ifCondition: 'ifRule: (string or <rstruct>)[]'
 namingRules:
   capitalStart: React component name convention
   forRule: always start with the keyword "for" followed by a whitespace then any string
