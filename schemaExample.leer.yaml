@@ -1,9 +1,9 @@
 description: YAMLeer is a domain-specific language designed to represent a json schema.
 configuration:
-  framework: React
   generator: GPT-4
   targetLanguage: Json Schema
-  library:
+  context:
+    - react components
   codingStyle:
     - allow whitespaces in keys name
 structure:
