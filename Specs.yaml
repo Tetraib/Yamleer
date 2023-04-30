@@ -1,33 +1,57 @@
-YAMLeerSpecifications:
-  Description: YAMLeer is a domain-specific language that represents React components
-  Configuration:
-    Framework: 
-      - Specify the framework used.
-    Generator:
-      - Specify the generator to be used. Usually GPT-4.
-    TargetLanguage:
-      - Specify the target language to be converted to.
-    Library:
-      - The list of the library that should be used in the components.
-    CodingStyle:
-      - General coding style preferences and guidelines.
-  Structure:
-    - Define a high-level structure for the application, using a nested representation of components.
-    - Use "if" to conditionally render components based on specific conditions.
-    - Use "for" to loop over a collection and render components for each item.
-  Components:
-    ComponentProperties:
-      - Specify the props for each component, including their types.
-      - Types definition are only required for the top components.
-    ComponentState:
-      - Define the state variables for each component, including their initial values.
-    ComponentBehavior:
-      - Describe general behavior of the components
-      - Describe specific behaviors using the structure "on <target>, when <event> [if <condition>], do <action>".
-      - Can target a function defined in the props of the components.
-    ComponentLayout:
-      - Specify the layout properties for each component.
-    DynamicValueRepresentation:
-      - Use double curly braces {{ }} to represent dynamic values within component content or attributes.
-  ImportingExternalComponents:
-    - Import components from other files using the `importFrom` key.
+YAMLeer:
+  description: A domain-specific language that represents React components
+  purpose: To be converted to TypeScript by a Large Language Model (GPT-4)
+  characteristics:
+    - concise
+    - easily understood by humans and GPT-4
+    - valid YAML syntax
+    - inspired by TypeScript
+  features:
+    - Configuration
+    - Components
+    - Properties
+    - States
+    - Behavior
+    - Layout
+    - Structure
+    - Conditional rendering
+    - Loops
+    - Importing components from other files
+  syntax:
+    Configuration:
+      - framework
+      - generator
+      - targetLanguage
+      - library
+      - codingStyle
+    Components:
+      - name
+      - path (optional)
+      - importFrom (optional)
+      - props (optional)
+      - states (optional)
+      - behavior (optional)
+      - layout (optional)
+      - structure (optional)
+      - content (optional)
+    Properties:
+      - propName <propType>
+    States:
+      - stateName: initialValue
+    Behavior:
+      - on target, when event, do action
+      - can target component or function defined in props
+    Layout:
+      - predefined layout options
+    Structure:
+      - nesting of components
+      - for loop
+      - conditional rendering
+    Conditional rendering:
+      - if condition
+      - true: Component
+      - false: Component
+    Loops:
+      - for listName: Component
+    Importing components:
+      - importFrom: path/to/component
