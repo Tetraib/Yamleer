@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "YAMLeer",
+  "type": "object",
+  "properties": {
+    "Description": { "type": "string" },
+    "Configuration": {
+      "type": "object",
+      "properties": {
+        "framework": { "type": "string" },
+        "generator": { "type": "string" },
+        "targetLanguage": { "type": "string" },
+        "library": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "codingStyle": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["framework", "generator", "targetLanguage", "library", "codingStyle"]
+    },
+    "components": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "path": { "type": "string" },
+          "props": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "states": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "propertyNames": { "type": "string" },
+              "additionalProperties": { "type": "integer" }
+            }
+          },
+          "behavior": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "layout": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "structure": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "importFrom": { "type": "string" }
+        }
+      }
+    }
+  },
+  "required": ["Description", "Configuration", "components"]
+}
