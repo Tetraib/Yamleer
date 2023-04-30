@@ -1,29 +1,33 @@
 YAMLeerSpecifications:
   Description: YAMLeer is a domain-specific language that represents React components
   Configuration:
-    Framework: Next.js
-    Generator: GPT-4
-    TargetLanguage: TypeScript
-    Library: Material-UI
+    Framework: 
+      - Specify the framework used.
+    Generator:
+      - Specify the generator to be used. Usually GPT-4.
+    TargetLanguage:
+      - Specify the target language to be converted to.
+    Library:
+      - The list of the library that should be used in the components.
     CodingStyle:
-      - General coding style preferences and guidelines
+      - General coding style preferences and guidelines.
   Structure:
-    - Define a high-level structure for the application, using a nested representation of components
-    - Use "if" to conditionally render components based on specific conditions
-    - Use "for" to loop over a collection and render components for each item
+    - Define a high-level structure for the application, using a nested representation of components.
+    - Use "if" to conditionally render components based on specific conditions.
+    - Use "for" to loop over a collection and render components for each item.
   Components:
     ComponentProperties:
-      - Specify the props for each component, including their types
-      - Types definition are only required for the top components
+      - Specify the props for each component, including their types.
+      - Types definition are only required for the top components.
     ComponentState:
-      - Define the state variables for each component, including their initial values
+      - Define the state variables for each component, including their initial values.
     ComponentBehavior:
       - Describe general behavior of the components
-      - Describe specific behaviors using the structure "on <target>, when <event> [if <condition>], do <action>"
+      - Describe specific behaviors using the structure "on <target>, when <event> [if <condition>], do <action>".
       - Can target a function defined in the props of the components.
     ComponentLayout:
-      - Specify the layout properties for each component, such as alignment and size
+      - Specify the layout properties for each component.
     DynamicValueRepresentation:
-      - Use double curly braces {{ }} to represent dynamic values within component content or attributes
+      - Use double curly braces {{ }} to represent dynamic values within component content or attributes.
   ImportingExternalComponents:
-    - Import components from other files using the `importFrom` key
+    - Import components from other files using the `importFrom` key.
