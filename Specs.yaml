@@ -6,21 +6,24 @@ YAMLeerSpecifications:
     TargetLanguage: TypeScript
     Library: Material-UI
     CodingStyle:
-      - Use functional components
-      - Use arrow functions
-      - Use React fragments
-      - Use async/await
-      - Omit semicolons
-      - Include the path at the first line of code
-      - Favor functional programming
+      - General coding style preferences and guidelines
   Structure:
     - Define a high-level structure for the application, using a nested representation of components
+    - Use "if" to conditionally render components based on specific conditions
+    - Use "for" to loop over a collection and render components for each item
   Components:
     ComponentProperties:
       - Specify the props for each component, including their types
+      - Types definition are only required for the top components
+    ComponentState:
+      - Define the state variables for each component, including their initial values
     ComponentBehavior:
-      - Describe behaviors using the structure: "on <target>, when <event> [if <condition>], do <action>"
+      - Describe general behavior of the components
+      - Describe specific behaviors using the structure "on <target>, when <event> [if <condition>], do <action>"
+      - Can target a function defined in the props of the components.
     ComponentLayout:
       - Specify the layout properties for each component, such as alignment and size
+    DynamicValueRepresentation:
+      - Use double curly braces {{ }} to represent dynamic values within component content or attributes
   ImportingExternalComponents:
     - Import components from other files using the `importFrom` key
