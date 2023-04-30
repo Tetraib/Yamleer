@@ -1,0 +1,24 @@
+structure :
+description: string
+configuration: {string:string}
+  framework: string
+  generator: string
+  targetLanguage: string
+  library: string[]
+  codingStyle: string[]
+structure: {string:nul} or {string:{string:nul}
+      for myList: ListItem
+      if someCondition: {string: string} or {string:object}
+components: {string:{string:string}
+  MyComponent:
+    path: string
+    props: (string or {string: string})[]
+    states: {string: string}[]
+    behavior: string[]
+      - on <string> when <string> if <string> do <string>
+    layout: string[]
+    content: string
+    importFrom: string
+    
+definition:
+  
