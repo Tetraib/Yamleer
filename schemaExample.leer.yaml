@@ -26,13 +26,13 @@ structure:
       importFrom: string
 definitions:
   component:
-    nameConvention: capitalStart
+    nameConvention: reactComponent
 types:
-  rstruct: 'capitalStart: (nul or <rstruct> or <forLoop> or <ifCondition>)'
-  forLoop: 'forName: forRule'
-  ifCondition: 'ifRule: (string or <rstruct>)[]'
+  rstruct: 'reactComponent: (nul or <rstruct> or <forLoop> or <ifCondition>)'
+  forLoop: 'forRule: reactComponent'
+  ifCondition: 'ifRule: (string: reactComponent)[]'
 namingRules:
-  capitalStart: React component name convention
-  forRule: always start with the keyword "for" followed by a whitespace then any string
-  ifRule: always start with the keyword "if" followed by a whitespace then any string
+  reactComponent: react component name convention
+  forRule: start with the keyword "for" followed by a whitespace then any string
+  ifRule: start with the keyword "if" followed by a whitespace then any string
   
