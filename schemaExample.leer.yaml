@@ -1,3 +1,11 @@
+description: YAMLeer is a domain-specific language designed to represent a json schema.
+configuration:
+  framework: React
+  generator: GPT-4
+  targetLanguage: Json Schema
+  library:
+  codingStyle:
+    - allow whitespaces in keys name
 structure:
   description: string
   configuration:
@@ -21,6 +29,10 @@ definitions:
     nameConvention: capitalStart
 types:
   rstruct:
-    string: (string or <rstruct>)
+    string: string or <rstruct> or <forLoop> or <ifCondition>
+  forLoop: {forName: forRule}
+  ifCondition: (ifRule: string or <rstruct>)[]
 namingRules:
-  capitalStart: follow the React component naming convention
+  capitalStart: React component name convention
+  forRule: always start with the keyword "for" followed by a whitespace then any string
+  ifRule: always start with the keyword "if" followed by a whitespace then any string
