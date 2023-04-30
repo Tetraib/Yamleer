@@ -1,0 +1,26 @@
+YAMLeerSpecifications:
+  Description: YAMLeer is a domain-specific language that represents React components
+  Configuration:
+    Framework: Next.js
+    Generator: GPT-4
+    TargetLanguage: TypeScript
+    Library: Material-UI
+    CodingStyle:
+      - Use functional components
+      - Use arrow functions
+      - Use React fragments
+      - Use async/await
+      - Omit semicolons
+      - Include the path at the first line of code
+      - Favor functional programming
+  Structure:
+    - Define a high-level structure for the application, using a nested representation of components
+  Components:
+    ComponentProperties:
+      - Specify the props for each component, including their types
+    ComponentBehavior:
+      - Describe behaviors using the structure: "on <component>, when <event> [if <condition>], do <action>"
+    ComponentLayout:
+      - Specify the layout properties for each component, such as alignment and size
+  ImportingExternalComponents:
+    - Import components from other files using the `importFrom` key
