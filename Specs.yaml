@@ -19,7 +19,7 @@ YAMLeerSpecifications:
     ComponentProperties:
       - Specify the props for each component, including their types
     ComponentBehavior:
-      - Describe behaviors using the structure: "on <component>, when <event> [if <condition>], do <action>"
+      - Describe behaviors using the structure: "on <target>, when <event> [if <condition>], do <action>"
     ComponentLayout:
       - Specify the layout properties for each component, such as alignment and size
   ImportingExternalComponents:
