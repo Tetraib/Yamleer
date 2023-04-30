@@ -1,0 +1,15 @@
+configuration:
+
+Parts:
+  - describe: if pattern in structure
+   type: object
+   patternProperties:
+     ^if\040:
+       type: object
+       propertyNames:
+         type: string
+       additionalProperties:
+         type: string
+   minProperties: 1
+   maxProperties: 1
+   additionalProperties: false
