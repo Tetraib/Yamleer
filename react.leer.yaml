@@ -41,7 +41,7 @@ components:
       - sm width
   Button:
     props:
-      - class: myClassName
+      - variant: outlined
     content: Click me {{myTitle}}
   ListItem:
     content: myList.item
