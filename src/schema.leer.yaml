@@ -1,4 +1,6 @@
-description: YAMLeer is a domain-specific language designed to represent a json schema.
+YAMLeer: YAMLeer is a Domain-Specific Language designed to represent a json schema.
+version: react schema
+description:
 configuration:
   generator: GPT-4
   targetLanguage: Json Schema
@@ -15,23 +17,21 @@ structure:
     library: string[]
     codingStyle: string[]
   struct: rstruct
-  components:
-    component:
-      path: string
-      props: (string or {string: string})[]
-      states: {string: string}[]
-      behavior: string[]
-      layout: string[]
-      content: string
-      importFrom: string
+  components: component[] (reactComponent)
 definitions:
   component:
-    nameConvention: reactComponent
+    path: string
+    props: (string or {string: string})[]
+    states: {string: string}[]
+    behavior: string[]
+    layout: string[]
+    content: string
+    importFrom: string
   rstruct:
     string: string or rstruct or forLoop or ifCondition
   forLoop: {forRule: reactComponent}
-  ifCondition: ifRule: {string:reactComponent}[]
+  ifCondition: {ifRule: {string:reactComponent}[]}
 namingRules:
-  reactComponent: React component name convention
+  reactComponent: React component name convention - start with a capital letter
   forRule: always start with the keyword "for" followed by a whitespace then any string
   ifRule: always start with the keyword "if" followed by a whitespace then any string
