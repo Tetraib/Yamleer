@@ -1,5 +1,5 @@
 Yamleer: YAMLeer is a Domain-Specific Language designed to generate json schema.
-Leers: Reactleers Schema
+Leers: Reactleers
 description:
 configuration:
   generator: GPT-4
