@@ -1,4 +1,4 @@
-YAMLeer:
+ReactLeers:
   description: A domain-specific language that represents React components
   purpose: To be converted to TypeScript by a Large Language Model (GPT-4)
   characteristics:
