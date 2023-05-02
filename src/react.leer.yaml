@@ -23,29 +23,29 @@ structure:
         - false: ComponentB
       children:
 components:
-  MyComponent:
-    path: components/theFileName.tsx
-    props:
-      - myProp <string>
-      - children <React.ReactNode>
-      - myList <string[]>
-    states:
-      - counter: 0
-    behavior:
-      - on Button, when clicked, do add 1 to {{counter}}
-    layout:
-      - center vertical
-      - center horizontal
-      - sm width
-  Button:
-    props:
-      - variant: outlined
-    content: Click me {{myTitle}}
-  ListItem:
-    content: myList.item
-  ComponentA: 
-    importFrom: components/otherFileName.tsx
-  ComponentB:
-    importFrom: components/otherFileName.tsx
-  ComponentC:
-    importFrom: components/otherFileName.tsx
+  - MyComponent:
+      path: components/theFileName.tsx
+      props:
+        - myProp <string>
+        - children <React.ReactNode>
+        - myList <string[]>
+      states:
+        - counter: 0
+      behavior:
+        - on Button, when clicked, do add 1 to {{counter}}
+      layout:
+        - center vertical
+        - center horizontal
+        - sm width
+  - Button:
+      props:
+        - variant: outlined
+      content: Click me {{myTitle}}
+  - ListItem:
+      content: myList.item
+  - ComponentA: 
+      importFrom: components/otherFileName.tsx
+  - ComponentB:
+      importFrom: components/otherFileName.tsx
+  - ComponentC:
+      importFrom: components/otherFileName.tsx
