@@ -14,25 +14,24 @@ structure:
     targetLanguage: string
     library: string[]
     codingStyle: string[]
-  struct: <rstruct>
+  struct: rstruct
   components:
     component:
       path: string
-      props: '(string or (string: string))[]'
-      states: '(string: string)[]'
+      props: (string or {string: string})[]
+      states: {string: string}[]
       behavior: string[]
       layout: string[]
       content: string
       importFrom: string
 definitions:
   component:
-    nameConvention: reactComponent
-types:
-  rstruct: 'reactComponent: (nul or <rstruct> or <forLoop> or <ifCondition>)'
-  forLoop: 'forRule: reactComponent'
-  ifCondition: 'ifRule: (string: reactComponent)[]'
+    nameConvention: capitalStart
+  rstruct:
+    string: string or rstruct or forLoop or ifCondition
+  forLoop: {forRule: reactComponent}
+  ifCondition: ifRule: {string:reactComponent}[]
 namingRules:
-  reactComponent: react component name convention
-  forRule: start with the keyword "for" followed by a whitespace then any string
-  ifRule: start with the keyword "if" followed by a whitespace then any string
-  
+  reactComponent: React component name convention
+  forRule: always start with the keyword "for" followed by a whitespace then any string
+  ifRule: always start with the keyword "if" followed by a whitespace then any string
