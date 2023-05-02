@@ -1,9 +1,9 @@
 Description: YAMLeer is a domain-specific language that represents React components
 Configuration:
-  framework: Nextjs
   generator: GPT4
   targetLanguage: Typescript
-  library:
+  context:
+    - Nextjs
     - material-ui
   codingStyle:
     - use functional component
