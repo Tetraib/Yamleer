@@ -26,7 +26,7 @@ structure:
       importFrom: string
 definitions:
   component:
-    nameConvention: capitalStart
+    nameConvention: reactComponent
   rstruct:
     string: string or rstruct or forLoop or ifCondition
   forLoop: {forRule: reactComponent}
