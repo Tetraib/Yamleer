@@ -1,4 +1,4 @@
-Description: YAMLeer is a domain-specific language that represents React components
+Description: ReactLeers is a domain-specific language that represents React components
 Configuration:
   generator: GPT4
   targetLanguage: Typescript
