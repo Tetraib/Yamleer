@@ -6,6 +6,8 @@ configuration:
   targetLanguage: Json Schema
   context:
     - react components
+  features:
+    - {{string}} represents dynamic value
   codingStyle:
     - allow whitespaces in keys name
 structure:
@@ -17,9 +19,9 @@ structure:
     library: string[]
     codingStyle: string[]
   struct: rstruct
-  components: component[] (reactComponent)
-definitions:
-  component:
+  components: component[]
+types:
+  component: #reactComponent
     path: string
     props: (string or {string: string})[]
     states: {string: string}[]
@@ -30,8 +32,8 @@ definitions:
   rstruct:
     string: string or rstruct or forLoop or ifCondition
   forLoop: {forRule: reactComponent}
-  ifCondition: {ifRule: {string:reactComponent}[]}
-namingRules:
-  reactComponent: React component name convention - start with a capital letter
+  ifCondition: {ifRule: {string: reactComponent}[]}
+tags:
+  reactComponent: react component name convention - start with a capital letter
   forRule: always start with the keyword "for" followed by a whitespace then any string
   ifRule: always start with the keyword "if" followed by a whitespace then any string
