@@ -34,6 +34,6 @@ types:
   forLoop: {forRule: reactComponent}
   ifCondition: {ifRule: {string: reactComponent}[]}
 tags:
-  reactComponent: react component name convention - start with a capital letter
-  forRule: always start with the keyword "for" followed by a whitespace then any string
-  ifRule: always start with the keyword "if" followed by a whitespace then any string
+  reactComponent: name start with a capital letter, it follows the react component name convention
+  forRule: name start with the word for, then a whitespace, then a string
+  ifRule: name start with the word if, then a whitespace, then a string
