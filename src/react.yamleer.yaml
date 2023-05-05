@@ -11,10 +11,10 @@ configuration:
     - allow whitespaces in keys name
 Reactleers: #(ReactLeers is a domain-specific language that represents React components)
   configuration:
-    generator: string
-    targetLanguage: string
+    generator: string #(The intended AI generator)
+    targetLanguage: string #(Target language in which Reactleers will be converted)
     context: string[] #(Specify the context in wich Reactleers is used)
-    codingStyle: string[]
+    codingStyle: string[] #(Coding style preferences)
   structure: rstruct #(Structure of the components)
   components: {reactComponent: component}[] #(List of React components)
 types:
