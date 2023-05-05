@@ -32,6 +32,6 @@ types:
   rstruct: null or {reactComponent: rstruct} or forLoop or ifCondition
   forLoop: {forRule: reactComponent}
   ifCondition: {ifRule: {string: reactComponent}[]}
-  reactComponent: string (Pascal case)
+  reactComponent: string *Pascal case*
   forRule: string *"for "string*
   ifRule: string *"if "string*
