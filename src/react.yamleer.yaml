@@ -2,7 +2,7 @@ Yamleer: is a Domain-Specific Language designed to generate json schema
 configuration:
   generator: GPT-4
   targetLanguage: Json Schema
-  features:
+  instructions:
     - *<text>* represents a naming convention
     - #(<text>) represents the description of the field
   codingStyle:
