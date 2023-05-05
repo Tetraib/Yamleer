@@ -4,34 +4,34 @@ description:
 configuration:
   generator: GPT-4
   targetLanguage: Json Schema
-  context:
-    - react components
+  context: 
+    - This leers aim to represents react components
   features:
     - *<text>* represents a naming convention
+    - #(<text>) represents the description of the field
   codingStyle:
     - allow whitespaces in keys name
 structure:
-  description: string
+  description: string #(Description of the Leers)
   configuration:
-    framework: string
     generator: string
     targetLanguage: string
-    library: string[]
+    context: string[] #(Specify the context in wich Reactleers is used)
     codingStyle: string[]
-  struct: rstruct
-  components: {reactComponent: component}[]
+  struct: rstruct #(Structure of the components)
+  components: {reactComponent: component}[] #(List of React components)
 types:
   component:
-    path: string
-    props: (string or {string: string})[]
-    states: {string: string}[]
-    behavior: string[]
-    layout: string[]
-    content: string
-    importFrom: string
+    path: string #(File path of the component)
+    props: (string or {string: string})[] #(Component's properties)
+    states: {string: string}[] #(Component's states)
+    behavior: string[] #(Component's behavior)
+    layout: string[] #(Component's layout)
+    content: string #(Component's content)
+    importFrom: string #(Path to the imported component)
   rstruct: null or {reactComponent: rstruct} or forLoop or ifCondition
-  forLoop: {forRule: reactComponent}
-  ifCondition: {ifRule: {string: reactComponent}[]}
+  forLoop: {forRule: reactComponent} #(For loop structure)
+  ifCondition: {ifRule: {string: reactComponent}[]} #(Conditional structure)
   reactComponent: string *Pascal case*
   forRule: string *"for "string*
   ifRule: string *"if "string*
