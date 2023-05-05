@@ -4,7 +4,7 @@ configuration:
   targetLanguage: Json Schema
   instructions:
     - *<text>* represents a naming convention
-    - #(<text>) represents the description of the field
+    - #(<text>) represents the description of the key
   codingStyle:
     - allow whitespaces in keys name
 leers:
