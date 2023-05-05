@@ -1,24 +1,21 @@
-Yamleer: Yamleer is a Domain-Specific Language designed to generate json schema.
-Leers: Reactleers
-description:
+Yamleer: Yamleer is a Domain-Specific Language designed to generate json schema
 configuration:
   generator: GPT-4
   targetLanguage: Json Schema
   context: 
-    - This leers aim to represents react components
+    - This leers aims to represents react components
   features:
     - *<text>* represents a naming convention
     - #(<text>) represents the description of the field
   codingStyle:
     - allow whitespaces in keys name
-structure:
-  description: string #(Description of the Leers)
+Reactleers: #(ReactLeers is a domain-specific language that represents React components)
   configuration:
     generator: string
     targetLanguage: string
     context: string[] #(Specify the context in wich Reactleers is used)
     codingStyle: string[]
-  struct: rstruct #(Structure of the components)
+  structure: rstruct #(Structure of the components)
   components: {reactComponent: component}[] #(List of React components)
 types:
   component:
