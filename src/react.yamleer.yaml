@@ -19,7 +19,7 @@ structure:
     library: string[]
     codingStyle: string[]
   struct: rstruct
-  components: component[]
+  components: {string: component}[]
 types:
   component: #reactComponent
     path: string
@@ -29,8 +29,7 @@ types:
     layout: string[]
     content: string
     importFrom: string
-  rstruct:
-    reactComponent: nul or rstruct or forLoop or ifCondition
+  rstruct: null or {reactComponent: rstruct} or forLoop or ifCondition
   forLoop: {forRule: reactComponent}
   ifCondition: {ifRule: {string: reactComponent}[]}
 tags:
