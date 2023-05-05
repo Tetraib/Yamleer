@@ -7,7 +7,7 @@ configuration:
   context:
     - react components
   features:
-    - {{string}} represents dynamic value
+    - *<text>* represents a naming convention
   codingStyle:
     - allow whitespaces in keys name
 structure:
@@ -19,9 +19,9 @@ structure:
     library: string[]
     codingStyle: string[]
   struct: rstruct
-  components: {string: component}[]
+  components: {reactComponent: component}[]
 types:
-  component: #reactComponent
+  component:
     path: string
     props: (string or {string: string})[]
     states: {string: string}[]
@@ -32,7 +32,6 @@ types:
   rstruct: null or {reactComponent: rstruct} or forLoop or ifCondition
   forLoop: {forRule: reactComponent}
   ifCondition: {ifRule: {string: reactComponent}[]}
-tags:
-  reactComponent: name start with a capital letter, it follows the react component name convention
-  forRule: name start with the word for, then a whitespace, then a string
-  ifRule: name start with the word if, then a whitespace, then a string
+  reactComponent: string (Pascal case)
+  forRule: string *"for "string*
+  ifRule: string *"if "string*
