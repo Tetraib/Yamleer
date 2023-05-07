@@ -5,12 +5,13 @@ configuration:
   guidelines:
     - only the key starting with * should be marked as required in the json schema
     - /text/ represents a regex pattern or a naming convention
-    - #(text) represents the description of the key that should be included in the json schema
+    - after "#" (text) represents the description of the key. This description must be included in the json schema
     - only the childs of "convertibles:" should be converted to the json schema
     - the first world of the leers description is the leers name
-    - leers name and description should also be included in the json schema 
+    - leers name and description should also be included in the json schema
+    - enforce the naming convention from "types:"
   codingStyle:
-    - allow whitespaces in keys name, eg "my key:" instead of "my_key:"
+    - allow whitespaces in keys name (e.g., "my key:" instead of "my_key:")
 convertibles:
   leers: Reactleers is a domain-specific language that represents React components #(The description of the leers)
   configuration:
@@ -33,5 +34,5 @@ types:
   forLoop: {forRule: reactComponent} #(For loop structure)
   ifCondition: {ifRule: {string: reactComponent}[]} #(Conditional structure)
   reactComponent: string /Pascal case/
-  forRule: string /"for "string/
-  ifRule: string /"if "string/
+  forRule: string /must start by the word "for " (e.g., for data)/
+  ifRule: string /must start by the word "if ", (e.g., if condition)/
