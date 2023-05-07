@@ -3,10 +3,10 @@ configuration:
   generator: GPT-4
   targetLanguage: Json Schema
   guidelines:
-    - *Key denotes that the key is required
+    - only the key starting with * should be marked as required in the json schema
     - /text/ represents a regex pattern or a naming convention
     - #(text) represents the description of the key that should be included in the json schema
-    - only the childs of "convertibles:" should be converted to json schema
+    - only the childs of "convertibles:" should be converted to the json schema
     - the first world of the leers description is the leers name
     - leers name and description should also be included in the json schema 
   codingStyle:
