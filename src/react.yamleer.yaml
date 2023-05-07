@@ -23,13 +23,13 @@ convertibles:
   components: {reactComponent: component}[] #(List of React components)
 types:
   - component:
-      path: string #(File path of the component)
-      props: (string or {string: string})[] #(Component's properties)
-      states: {string: string}[] #(Component's states)
-      behavior: string[] #(Component's behavior)
-      layout: string[] #(Component's layout)
-      content: string #(Component's content)
-      importFrom: string #(Path to the imported component)
+    path: string #(File path of the component)
+    props: (string or {string: string})[] #(Component's properties)
+    states: {string: string}[] #(Component's states)
+    behavior: string[] #(Component's behavior)
+    layout: string[] #(Component's layout)
+    content: string #(Component's content)
+    importFrom: string #(Path to the imported component)
   - rstruct: null or {reactComponent: rstruct} or forLoop or ifCondition
   - forLoop: {forRule: reactComponent} #(For loop structure)
   - ifCondition: {ifRule: {string: reactComponent}[]} #(Conditional structure)
