@@ -33,6 +33,6 @@ types:
   rstruct: null or {reactComponent: rstruct} or forLoop or ifCondition
   forLoop: {forRule: reactComponent} #(For loop structure)
   ifCondition: {ifRule: {string: reactComponent}[]} #(Conditional structure)
-  reactComponent: string /Pascal case/
-  forRule: string /must start by the word "for " (e.g., for data)/
-  ifRule: string /must start by the word "if ", (e.g., if condition)/
+  reactComponent: /string using the Pascal case notation/
+  forRule: /string that must start by the word "for " (e.g., for data)/
+  ifRule: /string that must start by the word "if ", (e.g., if condition)/
