@@ -1,14 +1,18 @@
-Yamleer: is a Domain-Specific Language designed to generate json schema
+yamleer: Yamleer is a Domain-Specific Language designed to generate json schema
 configuration:
   generator: GPT-4
   targetLanguage: Json Schema
-  instructions:
-    - *<text>* represents a naming convention
-    - #(<text>) represents the description of the key that should be included in the json schema 
+  guidelines:
+    - *Key denotes that the key is required
+    - /text/ represents a regex pattern or a naming convention
+    - #(text) represents the description of the key that should be included in the json schema
+    - only the childs of "convertibles:" should be converted to json schema
+    - the first world of the leers description is the leers name
+    - leers name and description should also be included in the json schema 
   codingStyle:
-    - allow whitespaces in keys name
-leers:
-  Reactleers: is a domain-specific language that represents React components)
+    - allow whitespaces in keys name, eg "my key:" instead of "my_key:"
+convertibles:
+  leers: Reactleers is a domain-specific language that represents React components #(The description of the leers)
   configuration:
     generator: string #(The intended AI generator)
     targetLanguage: string #(Target language in which Reactleers will be converted)
@@ -28,6 +32,6 @@ types:
   rstruct: null or {reactComponent: rstruct} or forLoop or ifCondition
   forLoop: {forRule: reactComponent} #(For loop structure)
   ifCondition: {ifRule: {string: reactComponent}[]} #(Conditional structure)
-  reactComponent: string *Pascal case*
-  forRule: string *"for "string*
-  ifRule: string *"if "string*
+  reactComponent: string /Pascal case/
+  forRule: string /"for "string/
+  ifRule: string /"if "string/
