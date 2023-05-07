@@ -5,7 +5,7 @@ configuration:
   guidelines:
     - only the key starting with * should be marked as required in the json schema
     - /text/ represents a regex pattern or a naming convention
-    - after "#" (text) represents the description of the key. This description must be included in the json schema
+    - "#(text)" represents the description of the key. This description must be included in the json schema
     - only the childs of "convertibles:" should be converted to the json schema
     - the first world of the leers description is the leers name
     - leers name and description should also be included in the json schema
