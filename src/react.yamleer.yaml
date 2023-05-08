@@ -34,6 +34,8 @@ schema:
     - rstruct: null or {/reactComponent/: rstruct} or forLoop or ifCondition
     - forLoop: {/forRule/: /reactComponent/} #(For loop structure)
     - ifCondition: {/ifRule/: {string: /reactComponent/}[]} #(Conditional structure)
-    - reactComponent : string using the Pascal case notation.
-    - forRule: string that must start by the word "for " (e.g., for data).
-    - ifRule: string that must start by the word "if ", (e.g., if condition).
+namePattern:
+  - reactComponent : ^[A-Z][a-zA-Z0-9]*$ # CamelCase
+  - forRule: ^for\s.*$ # for data
+  - ifRule: ^if\s.*$ # if condition
+  
