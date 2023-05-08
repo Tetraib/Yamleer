@@ -3,6 +3,7 @@ configuration:
   generator: GPT-4
   targetLanguage: Json Schema
   Guidelines:
+    - When generating the JSON schema, first create an intermediate YAML representation that is modular and easy to understand. Break down the schema into smaller, reusable parts and use the definitions section to define common data structures and properties that can be referenced in the main schema.
     - All key should be optional in the json schema.
     - When generating the JSON schema, ensure that all the information from the "types" section in the YAMLeer input is considered and correctly represented in the output schema.
     - Keys whose name start with "*" should be marked required in the json schema. Remove the "*" from the name.
