@@ -23,7 +23,7 @@ schema:
   structure: rstruct #(Structure of the components)
   components: {reactComponent: component}[] #(List of React components)
   $defs:
-    - component: #/reactComponent/
+    - component:
       path: string #(File path of the component)
       props: (string or {string: string})[] #(Component's properties)
       states: {string: string}[] #(Component's states)
