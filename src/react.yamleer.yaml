@@ -2,7 +2,7 @@ yamleer: Yamleer is a Domain-Specific Language designed to generate json schema
 configuration:
   generator: GPT-4
   targetLanguage: Json Schema
-  guidelines:
+  codeGenerationRules:
     - Keys that start with an asterisk (*) should be marked as "required" in the JSON schema (with the asterisk removed), while keys without an asterisk are considered optional and should not be marked as required.
     - Text enclosed by /slashes/ represents a regex pattern or a naming convention.
     - Text enclosed by "#(parentheses)" represents a key's description, which should be included in the JSON schema.
