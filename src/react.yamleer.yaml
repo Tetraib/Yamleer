@@ -4,6 +4,7 @@ configuration:
   targetLanguage: Json Schema
   Guidelines:
     - All key should be optional in the json schema.
+    - When generating the JSON schema, ensure that all the information from the "types" section in the YAMLeer input is considered and correctly represented in the output schema.
     - Keys whose name start with "*" should be marked required in the json schema. Remove the "*" from the name.
     - Text enclosed by "#(parentheses)" represents a key's description, which should be included in the JSON schema.
     - Only child elements under the "convertibles:" key should be converted to the JSON schema.
