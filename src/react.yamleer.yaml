@@ -9,7 +9,7 @@ configuration:
     - Text enclosed by slash "/text/" represents the pattern or Pattern Properties that should be used. The pattern alias is defined in regexAlias
     - Only child elements under the "schema:" key should be converted to the JSON schema.
     - The first word in the leers description is the leers name.
-    - Use the leers name and description as the name and description of the json schema JSON schema.
+    - Use the leers name and description as the $title and €description of the json schema.
     - Include the "leers:" key in the JSON schema.
     - Allow whitespaces in keys name (e.g., "my key:" instead of "my_key:").
 regexAlias:
