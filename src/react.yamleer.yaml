@@ -2,19 +2,18 @@ yamleer: Yamleer is a Domain-Specific Language designed to generate json schema
 configuration:
   generator: GPT-4
   targetLanguage: Json Schema
-  Guidelines:
-    - When generating the JSON schema, first create an intermediate YAML representation that is modular and easy to understand. Break down the schema into smaller, reusable parts and use the definitions section to define common data structures and properties that can be referenced in the main schema.
+  guidelines:
+    - When generating the JSON schema, first create an intermediate YAML representation that is modular and easy to understand. Break down the schema into smaller, reusable parts and use the $defs section to define common data structures and properties that can be referenced in the main schema.
     - All key should be optional in the json schema.
-    - When generating the JSON schema, ensure that all the information from the "types" section in the YAMLeer input is considered and correctly represented in the output schema.
     - Keys whose name start with "*" should be marked required in the json schema. Remove the "*" from the name.
-    - Text enclosed by "#(parentheses)" represents a key's description, which should be included in the JSON schema.
-    - Only child elements under the "convertibles:" key should be converted to the JSON schema.
+    - Text enclosed by "(parentheses)" in comments presents a key's description, which should be included in the JSON schema.
+    - Text enclosed by "/slash/" in comments represents a name pattern.
+    - Only child elements under the "schema:" key should be converted to the JSON schema.
     - The first word in the leers description is the leers name.
-    - Include the leers name and description in the JSON schema.
+    - Use the leers name and description as the name and description of the json schema JSON schema.
     - Include the "leers:" key in the JSON schema.
-  codingStyle:
     - Allow whitespaces in keys name (e.g., "my key:" instead of "my_key:").
-convertibles:
+schema:
   leers: Reactleers is a domain-specific language that represents React components #(The description of the leers)
   configuration:
     generator: string #(The intended AI generator)
@@ -23,18 +22,18 @@ convertibles:
     codingStyle: string[] #(Coding style preferences)
   structure: rstruct #(Structure of the components)
   components: {reactComponent: component}[] #(List of React components)
-types:
-  - component:
-    path: string #(File path of the component)
-    props: (string or {string: string})[] #(Component's properties)
-    states: {string: string}[] #(Component's states)
-    behavior: string[] #(Component's behavior)
-    layout: string[] #(Component's layout)
-    content: string #(Component's content)
-    importFrom: string #(Path to the imported component)
-  - rstruct: null or {reactComponent: rstruct} or forLoop or ifCondition
-  - forLoop: {forRule: reactComponent} #(For loop structure)
-  - ifCondition: {ifRule: {string: reactComponent}[]} #(Conditional structure)
-  - reactComponent: string using the Pascal case notation.
-  - forRule: string that must start by the word "for " (e.g., for data).
-  - ifRule: string that must start by the word "if ", (e.g., if condition).
+  $defs:
+    - component: #/reactComponent/
+      path: string #(File path of the component)
+      props: (string or {string: string})[] #(Component's properties)
+      states: {string: string}[] #(Component's states)
+      behavior: string[] #(Component's behavior)
+      layout: string[] #(Component's layout)
+      content: string #(Component's content)
+      importFrom: string #(Path to the imported component)
+    - rstruct: null or {reactComponent: rstruct} or forLoop or ifCondition
+    - forLoop: {forRule: reactComponent} #(For loop structure)
+    - ifCondition: {ifRule: {string: reactComponent}[]} #(Conditional structure)
+    - reactComponent : string using the Pascal case notation.
+    - forRule: string that must start by the word "for " (e.g., for data).
+    - ifRule: string that must start by the word "if ", (e.g., if condition).
