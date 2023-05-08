@@ -12,7 +12,7 @@ configuration:
     - Enforce the naming convention specified in the "types:" section.
     - Include the "leers:" key in the JSON schema.
   codingStyle:
-    - allow whitespaces in keys name (e.g., "my key:" instead of "my_key:")
+    - Allow whitespaces in keys name (e.g., "my key:" instead of "my_key:").
 convertibles:
   leers: Reactleers is a domain-specific language that represents React components #(The description of the leers)
   configuration:
