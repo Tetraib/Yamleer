@@ -5,13 +5,17 @@ configuration:
   guidelines:
     - All key should be optional in the json schema.
     - Keys whose name start with "*" should be marked required in the json schema. Remove the "*" from the name.
-    - Text enclosed by "(parentheses)" in comments presents a key's description, which should be included in the JSON schema.
-    - Text enclosed by "/slash/" represents a name pattern.
+    - Text enclosed by parenthesis "(text)" in comments presents a key's description, which should be included in the JSON schema.
+    - Text enclosed by slash "/text/" represents the pattern or Pattern Properties that should be used. The pattern alias is defined in regexAlias
     - Only child elements under the "schema:" key should be converted to the JSON schema.
     - The first word in the leers description is the leers name.
     - Use the leers name and description as the name and description of the json schema JSON schema.
     - Include the "leers:" key in the JSON schema.
     - Allow whitespaces in keys name (e.g., "my key:" instead of "my_key:").
+regexAlias:
+  - componentRule : ^[A-Z][a-zA-Z0-9]*$ # CamelCase
+  - forRule: ^for\s.*$ # for data
+  - ifRule: ^if\s.*$ # if condition
 schema:
   leers: Reactleers is a domain-specific language that represents React components #(The description of the leers)
   configuration:
@@ -20,7 +24,7 @@ schema:
     context: string[] #(Specify the context in wich Reactleers is used)
     codingStyle: string[] #(Coding style preferences)
   structure: rstruct #(Structure of the components)
-  components: {/reactComponent/: component}[] #(List of React components)
+  components: {/componentRule/: component}[] #(List of React components)
   $defs:
     - component:
       path: string #(File path of the component)
@@ -30,11 +34,8 @@ schema:
       layout: string[] #(Component's layout)
       content: string #(Component's content)
       importFrom: string #(Path to the imported component)
-    - rstruct: null or {/reactComponent/: rstruct} or forLoop or ifCondition
-    - forLoop: {/forRule/: /reactComponent/} #(For loop structure)
-    - ifCondition: {/ifRule/: {string: /reactComponent/}[]} #(Conditional structure)
-namePattern:
-  - reactComponent : ^[A-Z][a-zA-Z0-9]*$ # CamelCase
-  - forRule: ^for\s.*$ # for data
-  - ifRule: ^if\s.*$ # if condition
+    - rstruct: null or {/componentRule/: rstruct} or forLoop or ifCondition
+    - forLoop: {/forRule/: /componentRule/} #(For loop structure)
+    - ifCondition: {/ifRule/: {string: /componentRule/}[]} #(Conditional structure)
+
   
