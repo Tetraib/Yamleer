@@ -4,12 +4,10 @@ configuration:
   targetLanguage: Json Schema
   Guidelines:
     - All key should be optional in the json schema.
-    - Text enclosed by /slashes/ represents a regex pattern or a naming convention.
     - Text enclosed by "#(parentheses)" represents a key's description, which should be included in the JSON schema.
     - Only child elements under the "convertibles:" key should be converted to the JSON schema.
     - The first word in the leers description is the leers name.
     - Include the leers name and description in the JSON schema.
-    - Enforce the naming convention specified in the "types:" section.
     - Include the "leers:" key in the JSON schema.
   codingStyle:
     - Allow whitespaces in keys name (e.g., "my key:" instead of "my_key:").
@@ -35,6 +33,6 @@ types:
   - forLoop: {forRule: reactComponent} #(For loop structure)
   - ifCondition: {ifRule: {string: reactComponent}[]} #(Conditional structure)
 nameConvention:
-  - reactComponent: string using the Pascal case notation
-  - forRule: string that must start by the word "for " (e.g., for data)
-  - ifRule: string that must start by the word "if ", (e.g., if condition)
+  - reactComponent: string using the Pascal case notation.
+  - forRule: string that must start by the word "for " (e.g., for data).
+  - ifRule: string that must start by the word "if ", (e.g., if condition).
