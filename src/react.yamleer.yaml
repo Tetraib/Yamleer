@@ -4,6 +4,7 @@ configuration:
   targetLanguage: Json Schema
   Guidelines:
     - All key should be optional in the json schema.
+    - Keys whose name start with "*" should be marked required in the json schema. Remove the "*" from the name.
     - Text enclosed by "#(parentheses)" represents a key's description, which should be included in the JSON schema.
     - Only child elements under the "convertibles:" key should be converted to the JSON schema.
     - The first word in the leers description is the leers name.
@@ -32,7 +33,6 @@ types:
   - rstruct: null or {reactComponent: rstruct} or forLoop or ifCondition
   - forLoop: {forRule: reactComponent} #(For loop structure)
   - ifCondition: {ifRule: {string: reactComponent}[]} #(Conditional structure)
-nameConvention:
   - reactComponent: string using the Pascal case notation.
   - forRule: string that must start by the word "for " (e.g., for data).
   - ifRule: string that must start by the word "if ", (e.g., if condition).
