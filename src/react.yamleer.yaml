@@ -1,9 +1,8 @@
 yamleer: Yamleer is a Domain-Specific Language designed to generate json schema
 configuration:
   generator: GPT-4
-  targetLanguage: Json Schema
+  targetLanguage: Json Schema writen in yaml 
   guidelines:
-    - When generating the JSON schema, first create an intermediate YAML representation that is modular and easy to understand. Break down the schema into smaller, reusable parts and use the $defs section to define common data structures and properties that can be referenced in the main schema.
     - All key should be optional in the json schema.
     - Keys whose name start with "*" should be marked required in the json schema. Remove the "*" from the name.
     - Text enclosed by "(parentheses)" in comments presents a key's description, which should be included in the JSON schema.
